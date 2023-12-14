@@ -1,16 +1,20 @@
 import builtins
 import json
 
-import pytest
 from jellyfin.configuration import Configuration
+from pytest import fixture
 
 
 class TestConfiguration:
-    @pytest.fixture
+    @fixture
     def mock_file(self):
-        return {"apiKey": "test_api_key"}
+        return {
+            "apiKey": "test_api_key",
+            "hostname": "test_hostname",
+            "port": "test_port",
+        }
 
-    @pytest.fixture
+    @fixture
     def config(self):
         return Configuration(file_path="does_not_matter")
 
