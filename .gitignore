@@ -3,3 +3,5 @@
 .tox
 result.xml
 *.egg-info
+.python-version
+.venv

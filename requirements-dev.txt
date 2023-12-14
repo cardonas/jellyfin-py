@@ -3,4 +3,5 @@ black
 mypy
 pre-commit
 pytest
+pytest-mock
 tox
