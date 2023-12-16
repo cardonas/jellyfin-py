@@ -12,5 +12,4 @@ class Configuration:
     def load_configuration(self) -> ConfigurationData:
         with open(self.file_path, "r") as f:
             data = json.load(f)
-            api_key = data.get("apiKey")
-            return ConfigurationData(api_key=api_key)
+            return ConfigurationData.from_dict(data)  # type: ignore
